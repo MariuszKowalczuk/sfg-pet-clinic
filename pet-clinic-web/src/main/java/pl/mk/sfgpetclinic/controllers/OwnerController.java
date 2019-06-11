@@ -7,14 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Mariusz Kowalczuk
  */
 @Controller
-public class VetController {
+@RequestMapping("owners")
+public class OwnerController {
 
 
 
-    @RequestMapping({"vets/index", "vets", "vets/index.html", "/"})
+    @RequestMapping({"/index", "", "/index.html", "/"})
     public String listVets(){
 
-        return "vets/index";
+        return "owners/index";
 
     }
 }
