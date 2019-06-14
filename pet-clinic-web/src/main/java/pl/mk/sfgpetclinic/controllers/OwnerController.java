@@ -10,12 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("owners")
 public class OwnerController {
 
-
-
     @RequestMapping({"/index", "", "/index.html", "/"})
-    public String listVets(){
-
+    public String listVets() {
         return "owners/index";
-
     }
 }
