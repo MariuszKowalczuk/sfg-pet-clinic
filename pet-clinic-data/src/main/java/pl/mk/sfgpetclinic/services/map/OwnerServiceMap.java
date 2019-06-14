@@ -1,5 +1,6 @@
 package pl.mk.sfgpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import pl.mk.sfgpetclinic.model.Owner;
 import pl.mk.sfgpetclinic.services.OwnerService;
 
@@ -8,6 +9,8 @@ import java.util.Set;
 /**
  * @author Mariusz Kowalczuk
  */
+
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
@@ -34,7 +37,6 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public void delete(Owner object) {
         super.delete(object);
-
     }
 
     @Override

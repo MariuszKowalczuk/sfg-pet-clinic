@@ -7,8 +7,6 @@ import pl.mk.sfgpetclinic.model.Owner;
 import pl.mk.sfgpetclinic.model.Vet;
 import pl.mk.sfgpetclinic.services.OwnerService;
 import pl.mk.sfgpetclinic.services.VetService;
-import pl.mk.sfgpetclinic.services.map.OwnerServiceMap;
-import pl.mk.sfgpetclinic.services.map.VetServiceMap;
 
 /**
  * @author Mariusz Kowalczuk
@@ -22,12 +20,9 @@ public class DataLoader implements CommandLineRunner {
     //private final PetService petService;
     private final VetService vetService;
 
-
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        //petService = new PetServiceMap();
-        vetService = new VetServiceMap();
-
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
 

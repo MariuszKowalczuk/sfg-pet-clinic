@@ -1,5 +1,6 @@
 package pl.mk.sfgpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import pl.mk.sfgpetclinic.model.Pet;
 import pl.mk.sfgpetclinic.services.PetService;
 
@@ -8,6 +9,7 @@ import java.util.Set;
 /**
  * @author Mariusz Kowalczuk
  */
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
